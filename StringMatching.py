@@ -17,7 +17,7 @@ class StringMatching():
     """
     def __init__(self, string_names):
         self.string_names = string_names
-        self.nb_string_names = len(self.affiliation_names)
+        self.nb_string_names = len(self.string_names)
         self.ratio_array = None
         self.link_strings_list = None
         self.string_names_linked = None
