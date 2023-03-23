@@ -69,6 +69,9 @@ $(function() {
 <div class="contents">
 <div class="textblock"><p><a class="anchor" id="md_README"></a> Python lib to match similar strings of a list. It relies on SequenceMatcher from difflib to compute the string matching ratios.</p>
 <h1><a class="anchor" id="autotoc_md1"></a>
+Online documentation</h1>
+<p><a href="https://romain894.github.io/Python_string_list_matching/">https://romain894.github.io/Python_string_list_matching/</a></p>
+<h1><a class="anchor" id="autotoc_md2"></a>
 How to use</h1>
 <p>You can use this matching library with only two lines: one to create the object with the object with the strings to compare, and the other one to run the comparaison and matching process:</p>
 <div class="fragment"><div class="line"># string_names is the list of strings to match</div>
@@ -92,7 +95,7 @@ How to use</h1>
 <div class="line">                                       use_cache,</div>
 <div class="line">                                       ratio_array_csv_path,</div>
 <div class="line">                                       sort_linked_list_by_len)</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md2"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md3"></a>
 Optimizations</h1>
 <p>The program is multithreaded so it can run on different CPU cores to speed up the computation.</p>
 <p>If a cache file is given, it allows the program to check if the ratios of the strings in the list was previously computed (it's the longest part). If so, it loads the array and skip this computation. To be usefull, the cache file must be different for each list of strings to match (in case there is).</p>
