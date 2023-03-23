@@ -2,6 +2,10 @@
 
 Python lib to match similar strings of a list. It relies on SequenceMatcher from difflib to compute the string matching ratios.
 
+## Online documentation
+
+[https://romain894.github.io/Python_string_list_matching/](https://romain894.github.io/Python_string_list_matching/)
+
 ## How to use
 
 You can use this matching library with only two lines: one to create the object with the object with the strings to compare, and the other one to run the comparaison and matching process:
