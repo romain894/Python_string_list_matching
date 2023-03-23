@@ -15,9 +15,9 @@ class StringMatching():
     @brief      A Python class to match similar strings
                 based on SequenceMatcher from difflib
     """
-    def __init__(self, string_names, nb_string_names):
+    def __init__(self, string_names):
         self.string_names = string_names
-        self.nb_string_names = nb_string_names
+        self.nb_string_names = len(self.affiliation_names)
         self.ratio_array = None
         self.link_strings_list = None
         self.string_names_linked = None
@@ -246,6 +246,24 @@ class StringMatching():
                             use_cache = True,
                             ratio_array_csv_path = None,
                             sort_linked_list_by_len = True):
+        """!
+        @brief      Links strings. All in one function: compute the ratio array, link
+                    the strings from the ratio array and sort the ouptut linked list
+        
+        @param      link_ratio_threshold     The ratio threshold to link strings
+                                             (fload from 0 to 1)
+        @param      link_ratio_warning       The ratio warning when strings are
+                                             linked (TODO) (fload from 0 to 1)
+        @param      cache_ratio_array_path   The cache ratio array path (str)
+        @param      use_cache                The use cache (True or False)
+        @param      ratio_array_csv_path     The ratio array csv path (str)
+        @param      sort_linked_list_by_len  The sort linked list by length
+                                             (True or False)
+        
+        @return     the list, optionally sorted, with in each item a list with
+                    all matched/similar strings
+        """
+
 
         self.compute_ratio_array_strings(ratio_array_csv_path, use_cache, cache_ratio_array_path)
 

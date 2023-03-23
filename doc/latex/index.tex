@@ -1,0 +1,37 @@
+\label{index_md_README}%
+\Hypertarget{index_md_README}%
+ Python lib to match similar strings of a list. It relies on Sequence\+Matcher from difflib to compute the string matching ratios.\hypertarget{index_autotoc_md1}{}\doxysection{How to use}\label{index_autotoc_md1}
+You can use this matching library with only two lines\+: one to create the object with the object with the strings to compare, and the other one to run the comparaison and matching process\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\# string\_names is the list of strings to match}
+\DoxyCodeLine{string\_names = ["{}string1"{}, "{}string2"{}, "{}..."{}]}
+\DoxyCodeLine{matching = StringMatching(string\_names)}
+\DoxyCodeLine{}
+\DoxyCodeLine{\# the ratio threshold must be between 0 and 1}
+\DoxyCodeLine{\# a higher ratio will link less string but with}
+\DoxyCodeLine{\# a higher similarity}
+\DoxyCodeLine{link\_ratio\_threshold = 0.85}
+\DoxyCodeLine{link\_ratio\_warning = 0 \# not implemented for now}
+\DoxyCodeLine{cache\_ratio\_array\_path = "{}the/path/for/cache.npz"{}}
+\DoxyCodeLine{use\_cache = True}
+\DoxyCodeLine{ratio\_array\_csv\_path = None \# not usefull}
+\DoxyCodeLine{sort\_linked\_list\_by\_len = True}
+\DoxyCodeLine{\# linked\_strings is a list of list of strings}
+\DoxyCodeLine{\# each sublist contains the strings matched}
+\DoxyCodeLine{linked\_strings = matching.link\_strings(link\_ratio\_threshold,}
+\DoxyCodeLine{                                       link\_ratio\_warning,}
+\DoxyCodeLine{                                       cache\_ratio\_array\_path,}
+\DoxyCodeLine{                                       use\_cache,}
+\DoxyCodeLine{                                       ratio\_array\_csv\_path,}
+\DoxyCodeLine{                                       sort\_linked\_list\_by\_len)}
+
+\end{DoxyCode}
+\hypertarget{index_autotoc_md2}{}\doxysection{Optimizations}\label{index_autotoc_md2}
+The program is multithreaded so it can run on different CPU cores to speed up the computation.
+
+If a cache file is given, it allows the program to check if the ratios of the strings in the list was previously computed (it\textquotesingle{}s the longest part). If so, it loads the array and skip this computation. To be usefull, the cache file must be different for each list of strings to match (in case there is).
+
+Romain THOMAS 2023 ~\newline
+ Stockholm Resilience Centre 

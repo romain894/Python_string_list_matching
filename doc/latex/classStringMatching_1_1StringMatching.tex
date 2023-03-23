@@ -1,0 +1,183 @@
+\hypertarget{classStringMatching_1_1StringMatching}{}\doxysection{String\+Matching.\+String\+Matching Class Reference}
+\label{classStringMatching_1_1StringMatching}\index{StringMatching.StringMatching@{StringMatching.StringMatching}}
+
+
+A Python class to match similar strings based on Sequence\+Matcher from difflib.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classStringMatching_1_1StringMatching_a1ed39eec8b60fd6cc03cdf8000f4779a}\label{classStringMatching_1_1StringMatching_a1ed39eec8b60fd6cc03cdf8000f4779a}} 
+def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self, string\+\_\+names)
+\item 
+def \mbox{\hyperlink{classStringMatching_1_1StringMatching_acc8711bd41e03110be86143ce56458fe}{init\+\_\+pool\+\_\+processes}} (self, lock\+\_\+1, lock\+\_\+2, shared\+\_\+counter)
+\begin{DoxyCompactList}\small\item\em Initialize each process with global variable locks and counter (for the multiprocessing) \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classStringMatching_1_1StringMatching_a50f4dd71e11e73b58c4375e04b4f520a}{compute\+\_\+ratio\+\_\+strings}} (self, i)
+\begin{DoxyCompactList}\small\item\em Compute the ratios for an string, used for the multiprocessing of \mbox{\hyperlink{classStringMatching_1_1StringMatching_a7d59325118acab6a5e60beeeed4f401a}{compute\+\_\+ratio\+\_\+array\+\_\+strings()}} \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classStringMatching_1_1StringMatching_a7d59325118acab6a5e60beeeed4f401a}{compute\+\_\+ratio\+\_\+array\+\_\+strings}} (self, ratio\+\_\+array\+\_\+csv\+\_\+path=None, use\+\_\+cache=True, cache\+\_\+ratio\+\_\+array\+\_\+path=None, max\+\_\+process\+\_\+nb=8)
+\begin{DoxyCompactList}\small\item\em Calculates the strings ratio array. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classStringMatching_1_1StringMatching_a0cda10cdabe99df1c444eb0df527a4f6}{link\+\_\+strings\+\_\+from\+\_\+ratios\+\_\+array}} (self, string\+\_\+link\+\_\+ratio\+\_\+threshold, string\+\_\+link\+\_\+ratio\+\_\+warning)
+\begin{DoxyCompactList}\small\item\em Links the strings. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classStringMatching_1_1StringMatching_ae47310d55672af9563757badba5717ee}{create\+\_\+ref\+\_\+citation\+\_\+id\+\_\+link}} (self)
+\begin{DoxyCompactList}\small\item\em Create an array which gives the matches/links between the similar strings, like link\+\_\+strings\+\_\+list() but use the name of the strings instead of the ratio\+\_\+array\+\_\+id to identify each string (it gives a list with each sub lists containing the strings names of all the identical strings) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classStringMatching_1_1StringMatching_a6b5bfbf462b63a2f8a57794d4b7b26a9}\label{classStringMatching_1_1StringMatching_a6b5bfbf462b63a2f8a57794d4b7b26a9}} 
+def \mbox{\hyperlink{classStringMatching_1_1StringMatching_a6b5bfbf462b63a2f8a57794d4b7b26a9}{sort\+\_\+string\+\_\+names\+\_\+linked\+\_\+list}} (self)
+\begin{DoxyCompactList}\small\item\em Sort the list self.\+string\+\_\+names\+\_\+linked by the len of each element. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classStringMatching_1_1StringMatching_a4d8830f2745dd18b4fc100fc06df138a}{link\+\_\+strings}} (self, link\+\_\+ratio\+\_\+threshold=0.\+85, link\+\_\+ratio\+\_\+warning=0, cache\+\_\+ratio\+\_\+array\+\_\+path=None, use\+\_\+cache=True, ratio\+\_\+array\+\_\+csv\+\_\+path=None, sort\+\_\+linked\+\_\+list\+\_\+by\+\_\+len=True)
+\begin{DoxyCompactList}\small\item\em Links strings. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classStringMatching_1_1StringMatching_a3d9b1daf6c45bf4ea48df6b47ca8a324}\label{classStringMatching_1_1StringMatching_a3d9b1daf6c45bf4ea48df6b47ca8a324}} 
+{\bfseries string\+\_\+names}
+\item 
+\mbox{\Hypertarget{classStringMatching_1_1StringMatching_a737aea4688c69a03585876604db19b17}\label{classStringMatching_1_1StringMatching_a737aea4688c69a03585876604db19b17}} 
+{\bfseries nb\+\_\+string\+\_\+names}
+\item 
+\mbox{\Hypertarget{classStringMatching_1_1StringMatching_ab23609ff0f1fd44ac7605856a58aa43a}\label{classStringMatching_1_1StringMatching_ab23609ff0f1fd44ac7605856a58aa43a}} 
+{\bfseries ratio\+\_\+array}
+\item 
+\mbox{\Hypertarget{classStringMatching_1_1StringMatching_a8faeea7bfd2bd76a023b17d7a6c0ff64}\label{classStringMatching_1_1StringMatching_a8faeea7bfd2bd76a023b17d7a6c0ff64}} 
+{\bfseries link\+\_\+strings\+\_\+list}
+\item 
+\mbox{\Hypertarget{classStringMatching_1_1StringMatching_abeafda806168e54000b3494997060be5}\label{classStringMatching_1_1StringMatching_abeafda806168e54000b3494997060be5}} 
+{\bfseries string\+\_\+names\+\_\+linked}
+\item 
+\mbox{\Hypertarget{classStringMatching_1_1StringMatching_ae9fb6a0fe344cc51dcd265fa60801dcc}\label{classStringMatching_1_1StringMatching_ae9fb6a0fe344cc51dcd265fa60801dcc}} 
+{\bfseries time\+\_\+computation\+\_\+start}
+\item 
+\mbox{\Hypertarget{classStringMatching_1_1StringMatching_a25bc87dca56c7099c5864eb1c8e0a90a}\label{classStringMatching_1_1StringMatching_a25bc87dca56c7099c5864eb1c8e0a90a}} 
+{\bfseries total\+\_\+ratios\+\_\+to\+\_\+compute}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A Python class to match similar strings based on Sequence\+Matcher from difflib. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classStringMatching_1_1StringMatching_a7d59325118acab6a5e60beeeed4f401a}\label{classStringMatching_1_1StringMatching_a7d59325118acab6a5e60beeeed4f401a}} 
+\index{StringMatching.StringMatching@{StringMatching.StringMatching}!compute\_ratio\_array\_strings@{compute\_ratio\_array\_strings}}
+\index{compute\_ratio\_array\_strings@{compute\_ratio\_array\_strings}!StringMatching.StringMatching@{StringMatching.StringMatching}}
+\doxysubsubsection{\texorpdfstring{compute\_ratio\_array\_strings()}{compute\_ratio\_array\_strings()}}
+{\footnotesize\ttfamily def String\+Matching.\+String\+Matching.\+compute\+\_\+ratio\+\_\+array\+\_\+strings (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{ratio\+\_\+array\+\_\+csv\+\_\+path = {\ttfamily None},  }\item[{}]{use\+\_\+cache = {\ttfamily True},  }\item[{}]{cache\+\_\+ratio\+\_\+array\+\_\+path = {\ttfamily None},  }\item[{}]{max\+\_\+process\+\_\+nb = {\ttfamily 8} }\end{DoxyParamCaption})}
+
+
+
+Calculates the strings ratio array. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ratio\+\_\+array\+\_\+csv\+\_\+path} & The ratio array csv path to save it (if not provided, it won\textquotesingle{}t be saved) (string) \\
+\hline
+{\em use\+\_\+cache} & The use cache (indicate if we use the cache, aka load the cache if existing) \\
+\hline
+{\em cache\+\_\+ratio\+\_\+array\+\_\+path} & The cache ratio array path where it\textquotesingle{}s loaded or saved (string) \\
+\hline
+{\em max\+\_\+process\+\_\+nb} & The maximum number of process (minimum 1) (int) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classStringMatching_1_1StringMatching_a50f4dd71e11e73b58c4375e04b4f520a}\label{classStringMatching_1_1StringMatching_a50f4dd71e11e73b58c4375e04b4f520a}} 
+\index{StringMatching.StringMatching@{StringMatching.StringMatching}!compute\_ratio\_strings@{compute\_ratio\_strings}}
+\index{compute\_ratio\_strings@{compute\_ratio\_strings}!StringMatching.StringMatching@{StringMatching.StringMatching}}
+\doxysubsubsection{\texorpdfstring{compute\_ratio\_strings()}{compute\_ratio\_strings()}}
+{\footnotesize\ttfamily def String\+Matching.\+String\+Matching.\+compute\+\_\+ratio\+\_\+strings (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{i }\end{DoxyParamCaption})}
+
+
+
+Compute the ratios for an string, used for the multiprocessing of \mbox{\hyperlink{classStringMatching_1_1StringMatching_a7d59325118acab6a5e60beeeed4f401a}{compute\+\_\+ratio\+\_\+array\+\_\+strings()}} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & id of the string to compute the ratio to (int)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The ratio string list. (int\mbox{[}\mbox{]}) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classStringMatching_1_1StringMatching_ae47310d55672af9563757badba5717ee}\label{classStringMatching_1_1StringMatching_ae47310d55672af9563757badba5717ee}} 
+\index{StringMatching.StringMatching@{StringMatching.StringMatching}!create\_ref\_citation\_id\_link@{create\_ref\_citation\_id\_link}}
+\index{create\_ref\_citation\_id\_link@{create\_ref\_citation\_id\_link}!StringMatching.StringMatching@{StringMatching.StringMatching}}
+\doxysubsubsection{\texorpdfstring{create\_ref\_citation\_id\_link()}{create\_ref\_citation\_id\_link()}}
+{\footnotesize\ttfamily def String\+Matching.\+String\+Matching.\+create\+\_\+ref\+\_\+citation\+\_\+id\+\_\+link (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Create an array which gives the matches/links between the similar strings, like link\+\_\+strings\+\_\+list() but use the name of the strings instead of the ratio\+\_\+array\+\_\+id to identify each string (it gives a list with each sub lists containing the strings names of all the identical strings) 
+
+\begin{DoxyReturn}{Returns}
+The list of list with similar strings, identified with their names (str\mbox{[}\mbox{]}\mbox{[}\mbox{]}) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classStringMatching_1_1StringMatching_acc8711bd41e03110be86143ce56458fe}\label{classStringMatching_1_1StringMatching_acc8711bd41e03110be86143ce56458fe}} 
+\index{StringMatching.StringMatching@{StringMatching.StringMatching}!init\_pool\_processes@{init\_pool\_processes}}
+\index{init\_pool\_processes@{init\_pool\_processes}!StringMatching.StringMatching@{StringMatching.StringMatching}}
+\doxysubsubsection{\texorpdfstring{init\_pool\_processes()}{init\_pool\_processes()}}
+{\footnotesize\ttfamily def String\+Matching.\+String\+Matching.\+init\+\_\+pool\+\_\+processes (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{lock\+\_\+1,  }\item[{}]{lock\+\_\+2,  }\item[{}]{shared\+\_\+counter }\end{DoxyParamCaption})}
+
+
+
+Initialize each process with global variable locks and counter (for the multiprocessing) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lock\+\_\+1} & The lock for the print display (lock) \\
+\hline
+{\em lock\+\_\+2} & The lock for the counter (lock) \\
+\hline
+{\em shared\+\_\+counter} & The shared counter to calculate the remaining computation time (Value) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classStringMatching_1_1StringMatching_a4d8830f2745dd18b4fc100fc06df138a}\label{classStringMatching_1_1StringMatching_a4d8830f2745dd18b4fc100fc06df138a}} 
+\index{StringMatching.StringMatching@{StringMatching.StringMatching}!link\_strings@{link\_strings}}
+\index{link\_strings@{link\_strings}!StringMatching.StringMatching@{StringMatching.StringMatching}}
+\doxysubsubsection{\texorpdfstring{link\_strings()}{link\_strings()}}
+{\footnotesize\ttfamily def String\+Matching.\+String\+Matching.\+link\+\_\+strings (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{link\+\_\+ratio\+\_\+threshold = {\ttfamily 0.85},  }\item[{}]{link\+\_\+ratio\+\_\+warning = {\ttfamily 0},  }\item[{}]{cache\+\_\+ratio\+\_\+array\+\_\+path = {\ttfamily None},  }\item[{}]{use\+\_\+cache = {\ttfamily True},  }\item[{}]{ratio\+\_\+array\+\_\+csv\+\_\+path = {\ttfamily None},  }\item[{}]{sort\+\_\+linked\+\_\+list\+\_\+by\+\_\+len = {\ttfamily True} }\end{DoxyParamCaption})}
+
+
+
+Links strings. 
+
+All in one function\+: compute the ratio array, link the strings from the ratio array and sort the ouptut linked list
+
+
+\begin{DoxyParams}{Parameters}
+{\em link\+\_\+ratio\+\_\+threshold} & The ratio threshold to link strings (fload from 0 to 1) \\
+\hline
+{\em link\+\_\+ratio\+\_\+warning} & The ratio warning when strings are linked (TODO) (fload from 0 to 1) \\
+\hline
+{\em cache\+\_\+ratio\+\_\+array\+\_\+path} & The cache ratio array path (str) \\
+\hline
+{\em use\+\_\+cache} & The use cache (True or False) \\
+\hline
+{\em ratio\+\_\+array\+\_\+csv\+\_\+path} & The ratio array csv path (str) \\
+\hline
+{\em sort\+\_\+linked\+\_\+list\+\_\+by\+\_\+len} & The sort linked list by length (True or False)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the list, optionally sorted, with in each item a list with all matched/similar strings 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classStringMatching_1_1StringMatching_a0cda10cdabe99df1c444eb0df527a4f6}\label{classStringMatching_1_1StringMatching_a0cda10cdabe99df1c444eb0df527a4f6}} 
+\index{StringMatching.StringMatching@{StringMatching.StringMatching}!link\_strings\_from\_ratios\_array@{link\_strings\_from\_ratios\_array}}
+\index{link\_strings\_from\_ratios\_array@{link\_strings\_from\_ratios\_array}!StringMatching.StringMatching@{StringMatching.StringMatching}}
+\doxysubsubsection{\texorpdfstring{link\_strings\_from\_ratios\_array()}{link\_strings\_from\_ratios\_array()}}
+{\footnotesize\ttfamily def String\+Matching.\+String\+Matching.\+link\+\_\+strings\+\_\+from\+\_\+ratios\+\_\+array (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{string\+\_\+link\+\_\+ratio\+\_\+threshold,  }\item[{}]{string\+\_\+link\+\_\+ratio\+\_\+warning }\end{DoxyParamCaption})}
+
+
+
+Links the strings. 
+
+To run after that the ratio array is computed or loaded from the cache
+
+
+\begin{DoxyParams}{Parameters}
+{\em string\+\_\+link\+\_\+ratio\+\_\+threshold} & The reference link ratio threshold (fload from 0 to 1) \\
+\hline
+{\em ref\+\_\+link\+\_\+ratio\+\_\+warning} & The reference link ratio warning (float from 0 to 1) \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+String\+Matching.\+py\end{DoxyCompactItemize}
